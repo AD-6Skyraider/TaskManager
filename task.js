@@ -19,6 +19,9 @@ const tasks = [
 // For displaying tasks to the user
 let showTasks = ``;
 
+// For storing the value of a new task.
+let newTask;
+
 // Displays the menu for the user to select an option. Also, set's the user's response to the UserInput variable.
 let userInput = prompt(menu);
 
@@ -40,7 +43,19 @@ while (userInput !== `CLOSE`){
 
         //  Set the value of the showTasks string variable back to an empty string
         showTasks = "";
+    }
 
+    // Checks if users entered `NEW`
+    if (userInput === `NEW`){
+
+        // Prompts the user to enter a new task and stores their response
+        newTask = prompt(`Please enter a new task:`);
+
+        // Alerts the user that their new user has been added.
+        alert(`"${newTask}" has been added!`)
+
+        // Adds the users entry as a new item at the end of the tasks array.
+        tasks.push(newTask);
     }
 
     // Displays the menu again
