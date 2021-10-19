@@ -86,6 +86,18 @@ while (userInput !== `CLOSE`){
         // Just like with ParseInt, JavaScript will attempt to convert a string into a number when you try to subtract from it. So ParseInt is not necessary here.
        num = prompt(`Please enter a number to remove:\n${showTasks}`) -1;
 
+    //    Loop that continues looping until the user enters a valid number.
+    // Verifies the user entered a whole number and not a decimal that is one of the options in the prompt.
+        while (Math.floor(num) !== num || < 0 || num >= tasks.length || !num) {
+
+            // Alerts the user they have not entered a valid number
+            alert(`Not a valid entry`)
+
+            // Prompts user again and attempts to subtract 1 from their response.
+            num = prompt(`Please enter a number to remove:\n${showTasks}`) -1;
+
+        }
+
         // Removes the task/item selected by the user from the task array. Also, sets the task/item that was removed to the REMOVE variable. NOTE: Splice returns the value(s) that is removed as an item(s) in an array.  
         removed = tasks.splice(num, 1)
 
