@@ -29,12 +29,13 @@ let num;
 let removed;
 
 // Displays the menu for the user to select an option. Also, set's the user's response to the UserInput variable.
-let userInput = prompt(menu);
+// Using the toUpperCase method to convert the user's response to Uppercase. 
+let userInput = prompt(menu).toUpperCase();
 
-// Loops and continues to display the menu until the user ends/closes the program (Task Manager) - Enters "Close"
+// Loops and continues to display the menu until the user ends/closes the program (Task Manager) - Enters "Close" (UPPERCASE or Lowercase)
 while (userInput !== `CLOSE`){
     
-    // Checks if user entered "TASKS."
+    // Checks if user entered "TASKS (UPPERCASE or Lowercase)."
     if (userInput === `TASKS`){
 
         // The For Of Loop is used here to concatenate each task in the tasks array to the showTasks string variable.
@@ -51,7 +52,7 @@ while (userInput !== `CLOSE`){
         showTasks = "";
     }
 
-    // Checks if users entered `NEW`
+    // Checks if users entered `NEW` (UPPERCASE or Lowercase)
     if (userInput === `NEW`){
 
         // Prompts the user to enter a new task and stores their response
@@ -64,7 +65,7 @@ while (userInput !== `CLOSE`){
         tasks.push(newTask);
     }
 
-    // Checks if the user entered `REMOVE.`
+    // Checks if the user entered `REMOVE (UPPERCASE or Lowercase).`
     if (userInput === `REMOVE`){
 
         // Concatenates each task/item in the tasks array to the showTasks string variable. Also, sets/displays a number for each task.
@@ -92,7 +93,8 @@ while (userInput !== `CLOSE`){
     }
 
     // Displays the menu again
-    userInput = prompt(menu);
+    // // Using the toUpperCase method to convert the user's response to Uppercase. 
+    userInput = prompt(menu).toUpperCase;
 }
 
 // Alerts the user that they have closed the program.
