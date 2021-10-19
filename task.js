@@ -12,3 +12,14 @@ What would you like to do (Please enter one of the options below):
 
 // Displays the menu for the user to select an option. Also, set's the user's response to the UserInput variable.
 let userInput = prompt(menu);
+
+// Loops and continues to display the menu until the user ends/closes the program (Task Manager) - Enters "Close"
+while (userInput !== `CLOSE`){
+    // OTHER OPTIONS
+
+    // Displays the menu again
+    userInput = prompt(menu);
+}
+
+// Alerts the user that they have closed the program.
+alert(`Thank you for using the Task Manager`);
