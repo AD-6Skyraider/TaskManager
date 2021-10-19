@@ -58,6 +58,11 @@ while (userInput !== `CLOSE`){
         // Prompts the user to enter a new task and stores their response
         newTask = prompt(`Please enter a new task:`);
 
+        // Continues looping and prompting the user until they enter in something. NOTE: If the user does NOT type anything and just clicks ok, then the value returned is an empty string.
+        while (newTask === ``){
+            newTask = prompt(`Please enter a new task:`);
+        }
+
         // Alerts the user that their new user has been added.
         alert(`"${newTask}" has been added!`)
 
